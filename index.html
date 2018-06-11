@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="AJAX and Bootstrap">
+		<meta name="keywords" content="HTML, CSS, XML, JavaScript">
+		<meta name="author" content="vp">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
+		<title>AJAX and Bootstrap</title>
+	</head>
+	<body>
+	
+	
+	
+		<div class="container" id="table-container">
+		
+				 <div id="addNewRecord" class="modal fade">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h2 class="modal-title">Create new record</h2>
+							</div>
+							<div class="modal-body">
+								<input type="text" class="form-control" placeholder="User name..." id="user_name"><br>
+								<textarea class="form-control" placeholder="User password..." id="user_password"></textarea><br>
+								<input type="text" class="form-control" placeholder="User email..." id="user_email">
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-success create">Save</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div id="modifyRecord" class="modal fade">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h2 class="modal-title">Modify existing record</h2>
+							</div>
+							<div class="modal-body">
+								<input type="text" class="form-control" id="modify_user_name"><br>
+								<textarea class="form-control" id="modify_user_password"></textarea><br>
+								<input type="text" class="form-control" id="modify_user_email">
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-success update" data-value="">Update record</button>
+							</div>
+						</div>
+					</div>
+				</div>
+	
+		
+		
+		<h2>Bootstrap table with AJAX</h2>
+		<input id="addNew" style="float: right" type="button" class="btn btn-success" value="Add New">
+		<br>
+		<p>Refreshing user data in every 10 sec:</p>  
+			<table class="table table-striped" id="table">
+			    <thead>
+				<tr>
+					<th>ID</th>
+					<th>username</th>  
+					<th>password</th>
+					<th>email</th>
+					<th></th>
+					<th></th>
+				</tr>                   
+				</thead>
+				<tbody id="table-display" >
+				    <tr>
+					<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<script src="Data.js"></script>
+	</body>
+</html>
